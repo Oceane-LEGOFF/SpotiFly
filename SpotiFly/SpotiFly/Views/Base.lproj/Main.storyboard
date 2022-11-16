@@ -303,19 +303,9 @@
                     <navigationItem key="navigationItem" id="jCS-Fw-Ybh"/>
                     <connections>
                         <outlet property="search" destination="BC4-n5-O4s" id="22W-Md-Kew"/>
-                        <outlet property="searchDisplayController" destination="Mwd-u8-BfQ" id="3Af-Dw-6e2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rz4-of-K4O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="Mwd-u8-BfQ">
-                    <connections>
-                        <outlet property="delegate" destination="0e3-pV-e8Z" id="trL-Tt-Gd9"/>
-                        <outlet property="searchBar" destination="BC4-n5-O4s" id="2tt-vI-k4w"/>
-                        <outlet property="searchContentsController" destination="0e3-pV-e8Z" id="OXg-9D-Dsm"/>
-                        <outlet property="searchResultsDataSource" destination="0e3-pV-e8Z" id="VXu-Rz-cKR"/>
-                        <outlet property="searchResultsDelegate" destination="0e3-pV-e8Z" id="Zc0-WI-lHQ"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="4527.480916030534" y="23.943661971830988"/>
         </scene>
