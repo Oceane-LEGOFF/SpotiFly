@@ -40,6 +40,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="ukd-Dk-G1X" kind="relationship" relationship="viewControllers" id="wwE-YU-NIr"/>
+                        <segue destination="q9O-gC-a5u" kind="relationship" relationship="viewControllers" id="w3m-89-aw9"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V4M-Sl-neP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -230,14 +231,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" text="" translatesAutoresizingMaskIntoConstraints="NO" id="BC4-n5-O4s">
-                                <rect key="frame" x="-1" y="103" width="394" height="56"/>
+                                <rect key="frame" x="-1" y="147" width="394" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="0e3-pV-e8Z" id="Lh0-Pb-Dru"/>
                                 </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jzp-IB-73L">
-                                <rect key="frame" x="30" y="177" width="332" height="623"/>
+                                <rect key="frame" x="30" y="221" width="332" height="530"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchCell" rowHeight="86" id="lmR-sZ-aTo" customClass="SearchTableViewCell" customModule="SpotiFly" customModuleProvider="target">
@@ -306,6 +307,25 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rz4-of-K4O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5454.1984732824421" y="23.943661971830988"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="hyc-lp-OJR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="q9O-gC-a5u" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="jkA-XO-DGa"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5bt-xz-a33">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0e3-pV-e8Z" kind="relationship" relationship="rootViewController" id="2qB-c8-Wpc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ix4-sT-nZz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4527.480916030534" y="23.943661971830988"/>
         </scene>
