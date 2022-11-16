@@ -13,6 +13,7 @@
 		35A512C92924F14800F52B6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35A512C72924F14800F52B6D /* Main.storyboard */; };
 		35A512CB2924F14A00F52B6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35A512CA2924F14A00F52B6D /* Assets.xcassets */; };
 		35A512CE2924F14A00F52B6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35A512CC2924F14A00F52B6D /* LaunchScreen.storyboard */; };
+		77ABEA912924F6730049C4C7 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 77ABEA902924F6730049C4C7 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		35A512CA2924F14A00F52B6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35A512CD2924F14A00F52B6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35A512CF2924F14A00F52B6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77ABEA902924F6730049C4C7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,48 @@
 		35A512C02924F14800F52B6D /* SpotiFly */ = {
 			isa = PBXGroup;
 			children = (
-				35A512C12924F14800F52B6D /* AppDelegate.swift */,
-				35A512C32924F14800F52B6D /* SceneDelegate.swift */,
-				35A512C52924F14800F52B6D /* ViewController.swift */,
-				35A512C72924F14800F52B6D /* Main.storyboard */,
+				77ABEA8F2924F5070049C4C7 /* Views */,
+				77ABEA8E2924F4FC0049C4C7 /* Resources */,
+				77ABEA8C2924F4EB0049C4C7 /* Controllers */,
 				35A512CA2924F14A00F52B6D /* Assets.xcassets */,
-				35A512CC2924F14A00F52B6D /* LaunchScreen.storyboard */,
 				35A512CF2924F14A00F52B6D /* Info.plist */,
 			);
 			path = SpotiFly;
+			sourceTree = "<group>";
+		};
+		77ABEA8C2924F4EB0049C4C7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				35A512C52924F14800F52B6D /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		77ABEA8D2924F4F20049C4C7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				77ABEA902924F6730049C4C7 /* .gitignore */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		77ABEA8E2924F4FC0049C4C7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				35A512C12924F14800F52B6D /* AppDelegate.swift */,
+				35A512C32924F14800F52B6D /* SceneDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		77ABEA8F2924F5070049C4C7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				35A512C72924F14800F52B6D /* Main.storyboard */,
+				35A512CC2924F14A00F52B6D /* LaunchScreen.storyboard */,
+				77ABEA8D2924F4F20049C4C7 /* Cells */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +160,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77ABEA912924F6730049C4C7 /* .gitignore in Resources */,
 				35A512CE2924F14A00F52B6D /* LaunchScreen.storyboard in Resources */,
 				35A512CB2924F14A00F52B6D /* Assets.xcassets in Resources */,
 				35A512C92924F14800F52B6D /* Main.storyboard in Resources */,
@@ -285,13 +321,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BGU476N3ZN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SpotiFly/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -313,13 +350,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BGU476N3ZN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SpotiFly/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
