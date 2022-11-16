@@ -18,7 +18,6 @@ class HomeViewController: UIViewController {
 
         HomeCollectionView.dataSource = self
         HomeCollectionView.delegate = self
-        HomeCollectionView.collectionViewLayout = UICollectionViewFlowLayout()
         
        
         ApiManager().fetchTracksFromAlbumId(id: 302127) { tracks, error in
@@ -52,12 +51,6 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         return cell
     }
     
-}
-
-extension HomeViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 170, height: 205)
-    }
 }
     
 
