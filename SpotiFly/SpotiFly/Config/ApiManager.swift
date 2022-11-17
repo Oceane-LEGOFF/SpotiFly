@@ -31,7 +31,7 @@ import UIKit
 class ApiManager {
     
     let baseUrl = "https://api.deezer.com/"
-    var album = "album/302127"
+    var album = "album/211985622"
     var artists = [Artist]()
 
     

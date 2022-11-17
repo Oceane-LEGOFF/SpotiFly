@@ -20,7 +20,7 @@ class HomeViewController: UIViewController {
         HomeCollectionView.delegate = self
         
        
-        ApiManager().fetchTracksFromAlbumId(id: 302127) { tracks, error in
+        ApiManager().fetchTracksFromAlbumId(id: 211985622) { tracks, error in
             self.tracks = tracks
             
             DispatchQueue.main.async {
@@ -43,12 +43,24 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = HomeCollectionView.dequeueReusableCell(withReuseIdentifier: "homeCollectionViewCell", for: indexPath) as! HomeCollectionViewCell
         
-        print(tracks[indexPath.row].albumCover)
         cell.artistTrackCover.downloaded(from: tracks[indexPath.row].albumCover)
         cell.artistName.text = tracks[indexPath.row].artistName
         cell.artistTrackName.text = tracks[indexPath.row].titleSong
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "playerViewId") as? PlayerViewController {
+            
+            vc.trackAlbumCover = tracks[indexPath.row].albumCover
+            vc.trackName = tracks[indexPath.row].titleSong
+            vc.trackPreview = tracks[indexPath.row].preview
+            vc.trackArtistName = tracks[indexPath.row].artistName
+            
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
 }
