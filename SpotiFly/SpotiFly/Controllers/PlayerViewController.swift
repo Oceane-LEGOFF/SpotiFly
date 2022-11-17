@@ -31,20 +31,28 @@ class PlayerViewController: UIViewController {
             return
         }
         
-        do {
-            audioPlayer = try AVPlayer(url: url as URL)
-        } catch {
-            print("Une erreur est survenue avec le fichier audio")
-        }
-        
+        audioPlayer = AVPlayer(url: url as URL)
+
         let largeConfig = UIImage.SymbolConfiguration(pointSize: 30, weight: .bold, scale: .large)
         
-        playButton.setImage(UIImage(systemName: "pause.fill", withConfiguration: largeConfig), for: .normal)
+        playButton.setImage(UIImage(systemName: "pause.fill", withConfiguration: largeConfig)?.withTintColor(.black, renderingMode: UIImage.RenderingMode.alwaysOriginal), for: .normal)
         
         audioPlayer!.play()
         
         trackOutletCover.downloaded(from: trackAlbumCover)
         trackOutletName.text = trackName
         trackOutletArtistName.text = trackArtistName
+    }
+    @IBAction func playButton(_ sender: UIButton) {
+        let largeConfig = UIImage.SymbolConfiguration(pointSize: 30, weight: .bold, scale: .large)
+        
+        if audioPlayer?.rate == 0
+            {
+                audioPlayer!.play()
+                playButton.setImage(UIImage(systemName: "pause.fill", withConfiguration: largeConfig)?.withTintColor(.black, renderingMode: UIImage.RenderingMode.alwaysOriginal), for: .normal)
+            } else {
+                audioPlayer!.pause()
+                playButton.setImage(UIImage(systemName: "play.fill", withConfiguration: largeConfig)?.withTintColor(.black, renderingMode: UIImage.RenderingMode.alwaysOriginal), for: .normal)
+            }
     }
 }
