@@ -14,7 +14,7 @@ struct Artist {
 struct Album {
     var id: Int
     var name: String
-    var cover: String
+    var albumCover: String
 }
 
 struct Song {
@@ -130,7 +130,7 @@ class ApiManager {
                             let title = item["title"] as? String
                             let cover = item["cover"] as? String
                             
-                            let myAlbum = Album(id: id!, name: title!, cover: cover!)
+                            let myAlbum = Album(id: id!, name: title!, albumCover: cover!)
                             albumsArray.append(myAlbum)
                         }
                         completion(albumsArray, error)

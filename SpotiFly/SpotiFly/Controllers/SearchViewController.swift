@@ -3,7 +3,7 @@
 //  SpotiFly
 //
 //  Created by Axel Demorest on 16/11/2022.
-//
+/*
 
 import UIKit
 
@@ -15,12 +15,22 @@ class SearchViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 }
+*/
 
 
-/*
 import UIKit
 
-class SearchViewController: UIViewController, UITableViewDataSource, UISearchBarDelegate, UITableViewDelegate {
+class SearchViewController: UIViewController, /*UITableViewDataSource,*/ UISearchBarDelegate, UITableViewDelegate {
+    /*
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+     */
+    
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var searchTableView: UITableView!
@@ -31,9 +41,9 @@ class SearchViewController: UIViewController, UITableViewDataSource, UISearchBar
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.searchBar.delegate = self
+        //self.searchBar.delegate = self
         searchTableView.delegate = self
-        searchTableView.dataSource = self
+        //searchTableView.dataSource = self
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
@@ -62,7 +72,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UISearchBar
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return data.count
         }
-        
+        /*
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let artist = data[indexPath.row]
             let cell = tableView.dequeueReusableCell(withIdentifier: "searchArtistCell", for: indexPath) as! SearchArtistTableViewCell
@@ -72,6 +82,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UISearchBar
             
             return cell
         }
+         */
     }
 }
-*/
+
